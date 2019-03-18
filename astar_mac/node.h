@@ -23,7 +23,7 @@ struct Node
     }
 
     bool operator<(const Node& a) const {
-      return this->H > a.H;
+      return this->F > a.F;
     }
 
     Node& operator=(const Node& a) {

@@ -9,6 +9,9 @@
 #include <limits>
 #include <chrono>
 #include <queue>
+#include <map>
+#include <list>
+#include <algorithm>
 
 class ISearch
 {
@@ -51,7 +54,9 @@ class ISearch
         double                          hweight;//weight of h-value
         bool                            breakingties;//flag that sets the priority of nodes in addOpen function when their F-values is equal
         std::priority_queue<Node>       Open;
+        std::vector<std::list<int>>     Close2;
         std::vector<Node>               Close;
+        std::map<Node*, Node*> parent_map;
 
 
 };
